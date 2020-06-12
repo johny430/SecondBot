@@ -633,7 +633,7 @@ def balance(message):
         c = conn.cursor()
         c.execute('SELECT * FROM users WHERE id=?', t)
         a = c.fetchone()
-        msg = bot.send_message(message.chat.id, "Ваш баланс: "+str(a[1])+" ₽\nПополнять нельзя ,так как это тестовый бот!\nМожно подключить любые методы оплаты!")#,reply_markup=markupopl2)
+        msg = bot.send_message(message.chat.id, "Ваш баланс: "+str(a[1])+" ₽\nПополнять нельзя ,так как это демонстрационный бот!\nМожно подключить любые методы оплаты!")#,reply_markup=markupopl2)
         #bot.register_next_step_handler(msg, balance2)
 
 def balance2(message):
